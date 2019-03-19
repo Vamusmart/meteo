@@ -6,9 +6,9 @@ import Weather from "./components/Weather";
 
 const API_KEY = "9353922029a30cfb4937ae8e6de2e6d2";
 
-//***********************************************Function GetWeather */
+//***********************************************Function GetWeather */https://www.youtube.com/watch?v=204C9yNeOYI
 class App extends React.Component {
-  //state is an object tha lives within a component and is responsible for keeping track  or changing data within a component. That change could be the result of the user interaction maybe using a button or a user submitting a form but generally is just some sort of interaction with the application that causes the data to change. In the old version of react it was like that
+  //state is an object that lives within a component and is responsible for keeping track  or changing data within a component. That change could be the result of the user interaction maybe using a button or a user submitting a form but generally is just some sort of interaction with the application that causes the data to change. In the old version of react it was like that
   //constructor(props) {
   //      super(props);
   //      this.state = {
@@ -66,17 +66,29 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Titles />
-        <Form getWeather={this.getWeather} />
-        <Weather
-          //Defined all these props here it means that we have access of them in the weather.js
-          temperature={this.state.temperature}
-          city={this.state.city}
-          country={this.state.country}
-          humidity={this.state.humidity}
-          description={this.state.description}
-          error={this.state.error}
-        />
+        <div className="wrapper">
+          <div className="main">
+            <div className="container">
+              <div className="row">
+                <div className="col-xs-5 title-container">
+                  <Titles />
+                </div>
+                <div className="col-xs-7 form-container">
+                  <Form getWeather={this.getWeather} />
+                  <Weather
+                    //Defined all these props here it means that we have access of them in the weather.js
+                    temperature={this.state.temperature}
+                    city={this.state.city}
+                    country={this.state.country}
+                    humidity={this.state.humidity}
+                    description={this.state.description}
+                    error={this.state.error}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

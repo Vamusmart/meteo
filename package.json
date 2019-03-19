@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://vamusmart.github.io/Meteo/",
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "gh-pages": "^2.0.1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
