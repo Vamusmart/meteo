@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "private": true,
 
-  "homepage": "https://Vamusmart.github.io/Meteo",
-
   "dependencies": {
     "bootstrap": "^3.3.7",
     "gh-pages": "^2.0.1",
